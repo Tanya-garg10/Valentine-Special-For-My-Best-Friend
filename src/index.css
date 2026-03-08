@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 340 30% 97%;
+    --foreground: 340 40% 15%;
+
+    --card: 340 30% 95%;
+    --card-foreground: 340 40% 15%;
+
+    --popover: 340 30% 97%;
+    --popover-foreground: 340 40% 15%;
+
+    --primary: 340 82% 60%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 330 50% 90%;
+    --secondary-foreground: 340 40% 20%;
+
+    --muted: 330 30% 92%;
+    --muted-foreground: 340 20% 45%;
+
+    --accent: 350 90% 65%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 330 30% 88%;
+    --input: 330 30% 88%;
+    --ring: 340 82% 60%;
+
+    --radius: 0.75rem;
+
+    --rose-glow: 340 82% 70%;
+    --blush: 330 60% 94%;
+    --deep-rose: 345 70% 45%;
+    --warm-cream: 30 40% 96%;
+    --gold: 42 80% 60%;
+
+    --gradient-romantic: linear-gradient(135deg, hsl(340, 82%, 60%), hsl(350, 90%, 65%), hsl(330, 70%, 55%));
+    --gradient-soft: linear-gradient(180deg, hsl(340, 30%, 97%), hsl(330, 60%, 94%));
+    --gradient-hero: linear-gradient(135deg, hsl(345, 70%, 45%) 0%, hsl(340, 82%, 60%) 50%, hsl(350, 90%, 65%) 100%);
+
+    --shadow-romantic: 0 8px 32px -8px hsl(340 82% 60% / 0.3);
+    --shadow-soft: 0 4px 16px -4px hsl(340 82% 60% / 0.15);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body;
+    overflow-x: hidden;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: 'Playfair Display', serif;
+  }
+}
+
+@layer components {
+  .gradient-romantic {
+    background: var(--gradient-romantic);
+  }
+
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+
+  .gradient-soft {
+    background: var(--gradient-soft);
+  }
+
+  .shadow-romantic {
+    box-shadow: var(--shadow-romantic);
+  }
+
+  .shadow-soft {
+    box-shadow: var(--shadow-soft);
+  }
+
+  .text-gradient {
+    background: var(--gradient-romantic);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .polaroid {
+    @apply bg-card p-3 pb-12 rounded-sm;
+    box-shadow: 0 4px 20px -4px hsl(340 82% 60% / 0.2), 0 2px 8px -2px hsl(0 0% 0% / 0.1);
+    transform: rotate(-2deg);
+  }
+
+  .polaroid:nth-child(even) {
+    transform: rotate(2deg);
+  }
+
+  .glass {
+    background: hsl(340 30% 97% / 0.7);
+    backdrop-filter: blur(12px);
+    border: 1px solid hsl(330 30% 88% / 0.5);
+  }
+}
+
+@layer utilities {
+  .floating-heart {
+    animation: float-heart linear infinite;
+  }
+
+  @keyframes float-heart {
+    0% {
+      transform: translateY(100vh) rotate(0deg) scale(0.5);
+      opacity: 0;
+    }
+
+    10% {
+      opacity: 1;
+    }
+
+    90% {
+      opacity: 1;
+    }
+
+    100% {
+      transform: translateY(-10vh) rotate(720deg) scale(1);
+      opacity: 0;
+    }
+  }
+
+  @keyframes pulse-glow {
+
+    0%,
+    100% {
+      box-shadow: 0 0 20px hsl(340 82% 60% / 0.3);
+    }
+
+    50% {
+      box-shadow: 0 0 40px hsl(340 82% 60% / 0.6);
+    }
+  }
+
+  .pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite;
+  }
+
+  /* 3D Flip Card Styles */
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+
+  .preserve-3d {
+    transform-style: preserve-3d;
+  }
+
+  .backface-hidden {
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+  }
+}
+
+@keyframes shake {
+
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  25% {
+    transform: translateX(-10px);
+  }
+
+  75% {
+    transform: translateX(10px);
+  }
+}
+
+.shake {
+  animation: shake 0.5s ease-in-out;
+}
