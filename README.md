@@ -147,6 +147,4 @@ This project is open source and available for personal use.
 
 Created with React, TypeScript, and lots of love! Perfect for proposing to your best friend on Valentine's Day or any special occasion.
 
----
-
 **Remember:** The best proposals come from the heart. Use this as a starting point and make it uniquely yours! 💕
