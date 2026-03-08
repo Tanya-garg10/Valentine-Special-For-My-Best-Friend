@@ -1,4 +1,4 @@
-# 🎵 How to Add Music to Your App
+# 🎵 How to Add Your Own Music to App
 
 ## Quick Steps (5 minutes)
 
@@ -22,8 +22,6 @@ Rename your MP3 file to exactly: **`romantic-music.mp3`**
 - Click the music button (top-right corner)
 - Enjoy! 🎵
 
----
-
 ## Free Music Download Sites
 
 ### 1. Pixabay Music (Recommended)
@@ -43,8 +41,6 @@ Rename your MP3 file to exactly: **`romantic-music.mp3`**
 - Search: "romantic instrumental"
 - Free downloads available
 
----
-
 ## Popular Romantic Songs (Suggestions)
 
 **Bollywood Instrumentals:**
@@ -57,8 +53,6 @@ Rename your MP3 file to exactly: **`romantic-music.mp3`**
 - River Flows in You
 - A Thousand Years (Piano)
 - All of Me (Instrumental)
-
----
 
 ## Troubleshooting
 
@@ -76,10 +70,3 @@ Edit `src/components/MusicToggle.tsx` line 17:
 ```typescript
 audioRef.current.src = "/your-filename.mp3";
 ```
-
----
-
-## Current Status
-✅ Music player is ready
-⏳ Waiting for you to add `romantic-music.mp3` to `public` folder
-🎵 Once added, click the button to play!
